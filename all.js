@@ -1,12 +1,13 @@
 var done = false;
 
 function sanitize(text, conf){
-    return text.replace('{SITE_NAME}', conf.site_name);
+    return text.replace('{SITE_NAME}', conf.site_name).replace('{ABOUT_SITE}',conf.about_site);
 }
 
 function startAll(){
     let conf = {
         site_name: document.querySelectorAll('meta[property="og:site_name"]')[0].getAttribute('content'),
+        about_site: site_conf.about_site,
     }
     axios.get('/submodule/left_tr.html')
         .then(function (response) {

@@ -46,8 +46,8 @@ a:active, a:hover{
     margin: 0 16px;
     width: auto;
 }
-.left img{max-width:200px;display:block;margin:8px auto;}
-.right img{max-width:200px;display:block;margin:8px;float:left;}
+.left img{max-width:60%;border-radius:8px;display:block;margin:8px auto 32px auto;}
+.right img{max-width:200px;display:block;margin:8px 16px 8px 8px;float:left;}
 aside,
 details,
 main,
@@ -74,7 +74,7 @@ nav{
 }
 .main-grid {
     max-width: 1024px;
-    margin: 0 auto;
+    margin: 0 auto !important;
 }
 /* GRID SYSTEM */
 .row {
@@ -96,8 +96,6 @@ nav{
 }
 
 .col-mb-0{display:none;}
-.col-tb-0{display:block;}
-.col-pc-0{display:block;}
 .col-mb-1{width:8.33333%;}
 .col-mb-2{width:16.66666%;}
 .col-mb-3{width:25%;}
@@ -111,10 +109,13 @@ nav{
 .col-mb-11{width:91.66666%;}
 .col-mb-12{width: 100%;}
 
+@media (max-width : 480px){
+    .right img{max-width:60%;border-radius:8px;display:block;margin:8px auto; float:none;}
+}
+
 @media (min-width : 768px) and (max-width : 1023px){
     .col-mb-0{display:block;}
     .col-tb-0{display:none;}
-    .col-pc-0{display:block;}
     .col-tb-1{width:8.33333%;}
     .col-tb-2{width:16.66666%;}
     .col-tb-3{width:25%;}
