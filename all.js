@@ -6,7 +6,7 @@ function sanitize(text, conf){
 
 function startAll(){
     let conf = {
-        site_name: document.querySelectorAll('meta[property="og:site_name"]')[0].getAttribute('content'),
+        site_name: site_conf.site_name,
         about_site: site_conf.about_site,
     }
     axios.get('/submodule/left_tr.html')
